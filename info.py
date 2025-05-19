@@ -14,7 +14,7 @@ def is_enabled(value, default):
         return default
 
 
-SESSION = environ.get('SESSION', 'media_search')
+SESSION = environ.get('SESSION', 'TechVJBot')
 API_ID = int(environ.get('API_ID', '16013849'))
 API_HASH = environ.get('API_HASH', 'c8686adc1a0c7cd17f2201c40123ce91')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -112,7 +112,7 @@ LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu",
 QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160P", ""]
 SEASONS = ["s01" , "s02" , "s03" , "s04", "s05" , "s06" , "s07" , "s08" , "s09" , "s10"]
 
-STREAM_MODE = bool(environ.get('STREAM_MODE', True))
+STREAM_MODE = bool(environ.get('STREAM_MODE', False))
 
 #Dont Make Any Changes Here. Creat A Veriable Name "FQDN" In Your Deploying Plartform And Put App Url
 NO_PORT = bool(environ.get('NO_PORT', False))
