@@ -14,7 +14,7 @@ def is_enabled(value, default):
         return default
 
 
-SESSION = environ.get('SESSION', 'TechVJBot')
+SESSION = environ.get('SESSION', 'Media_search)
 API_ID = int(environ.get('API_ID', '16013849'))
 API_HASH = environ.get('API_HASH', 'c8686adc1a0c7cd17f2201c40123ce91')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -42,7 +42,7 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 
 DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://tonymawa:xKZnH1Kpxs1g5XkC@cluster0.5sd3s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") #MongoDB Url
 DATABASE_NAME = environ.get('DATABASE_NAME', "tonymawa")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
+COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
 MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
@@ -51,7 +51,7 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+7hhFYFo61m5hNzU9')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/movie_loverzz')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/mladminbot')
-UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/')
+UPDATE_CHANNEL_LNK = environ.get('UPDATE_CHANNEL_LNK', 'https://t.me/movie_loverzz')
 
 #Force Subscription Channel (Put Same Channel Id In Both Veriables)
 AUTH_CHANNEL = int(environ.get('AUTH_CHANNEL', '-1001622914589')) 
@@ -106,13 +106,13 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 PM_SEARCH = bool(environ.get('PM_SEARCH', True)) 
-EMOJI_MODE = bool(environ.get('EMOJI_MODE', False)) 
+EMOJI_MODE = bool(environ.get('EMOJI_MODE', True)) 
 
 LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
 QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160P", ""]
 SEASONS = ["s01" , "s02" , "s03" , "s04", "s05" , "s06" , "s07" , "s08" , "s09" , "s10"]
 
-STREAM_MODE = bool(environ.get('STREAM_MODE', False))
+STREAM_MODE = bool(environ.get('STREAM_MODE', True))
 
 #Dont Make Any Changes Here. Creat A Veriable Name "FQDN" In Your Deploying Plartform And Put App Url
 NO_PORT = bool(environ.get('NO_PORT', False))
