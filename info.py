@@ -14,7 +14,7 @@ def is_enabled(value, default):
         return default
 
 
-SESSION = environ.get('SESSION', 'Media_search)
+SESSION = environ.get('SESSION', 'media_search')
 API_ID = int(environ.get('API_ID', '16013849'))
 API_HASH = environ.get('API_HASH', 'c8686adc1a0c7cd17f2201c40123ce91')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
@@ -40,13 +40,13 @@ REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-100') #Support Chat Id
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://tonymawa:xKZnH1Kpxs1g5XkC@cluster0.5sd3s.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") #MongoDB Url
-DATABASE_NAME = environ.get('DATABASE_NAME', "tonymawa")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', '')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://cluster:rdYi5Ag9JCjYA11T@cluster0.efj5n.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") #MongoDB Url
+DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'SilentXBotz_files')
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
-MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "False"), False) # Type True For Turn On MULTIPLE DB FUNTION 
-DATABASE_URI2 = environ.get('DATABASE_URI2', "")
+MULTIPLE_DB = is_enabled(os.environ.get('MULTIPLE_DB', "True"), False) # Type True For Turn On MULTIPLE DB FUNTION 
+DATABASE_URI2 = environ.get('DATABASE_URI2', "mongodb+srv://cluster:yZ8tvosjuklgz4VG@cluster0.vybst.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+7hhFYFo61m5hNzU9')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/movie_loverzz')
@@ -92,7 +92,7 @@ P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "True")), False)
 AUTO_FFILTER = is_enabled((environ.get('AUTO_FFILTER', "True")), True)
 AUTO_DELETE = is_enabled((environ.get('AUTO_DELETE', "True")), True)
-DELETE_TIME = int(environ.get("DELETE_TIME", "300"))  
+DELETE_TIME = int(environ.get("DELETE_TIME", "600"))  
 LINK_MODE = is_enabled((environ.get('LINK_MODE', "True")), False)
 CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
 BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
